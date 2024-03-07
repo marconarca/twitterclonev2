@@ -55,11 +55,11 @@ Route::resource('idea', IdeaController::class)->only([
     'show'
 ]);
 
-Route::resource('idea.comments', IdeaController::class)->only([
+// idea/{idea}/comments
+Route::resource('idea.comments', CommentController::class)->only([
     'store'
 ])->middleware('auth');
 
-// idea/{idea}/comments
 
 Route::get('/terms', function() {
     return view('terms');
