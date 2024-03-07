@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\IdeaController;
 use App\Http\Controllers\ProfileController;
@@ -16,17 +18,48 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
-Route::post('/idea', [IdeaController::class, 'store'])->name('idea.store');
+// This is comment out because of Route::resource
+// Route::group([
+//     'prefix' => 'idea/',
+//     'as'     => 'idea.',
+    
+// ], function() {
+//     Route::get('/{idea}', [IdeaController::class, 'show'])->name('show');
 
-Route::get('/idea/{idea}', [IdeaController::class, 'show'])->name('idea.show');
+//     Route::group([
+//         'middleware' => ['auth']
+//     ], function() {
+//         Route::post('', [IdeaController::class, 'store'])->name('store');
 
-Route::get('/idea/{idea}/edit', [IdeaController::class, 'edit'])->name('idea.edit');
+//         Route::get('/{idea}/edit', [IdeaController::class, 'edit'])->name('edit');
+    
+//         Route::put('/{idea}', [IdeaController::class, 'update'])->name('update');
+    
+//         Route::delete('/{id}', [IdeaController::class, 'destroy'])->name('destroy');
+    
+//         Route::post('/{idea}/comments', [CommentController::class, 'store'])->name('comments.store');
+//     });
 
-Route::put('/idea/{idea}', [IdeaController::class, 'update'])->name('idea.update');
+// });
 
-Route::delete('/idea/{id}', [IdeaController::class, 'destroy'])->name('idea.destroy');
+Route::resource('idea', IdeaController::class)->except([
+    'index',
+    'create',
+    'show'
+])->middleware('auth');
+
+Route::resource('idea', IdeaController::class)->only([
+    'show'
+]);
+
+Route::resource('idea.comments', IdeaController::class)->only([
+    'store'
+])->middleware('auth');
+
+// idea/{idea}/comments
 
 Route::get('/terms', function() {
     return view('terms');
