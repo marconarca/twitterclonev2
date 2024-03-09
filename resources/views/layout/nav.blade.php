@@ -11,7 +11,7 @@
                     @auth()
                         
                         <li class="nav-item">
-                            <a class="nav-link" href="/profile"> {{ Auth::user()->name }} | {{ Auth::user()->email }} </a>
+                            <a class="nav-link {{ Route::is('profile') ? 'active' : '' }}" href="{{ route('profile') }}"> {{ Auth::user()->name }} | {{ Auth::user()->email }} </a>
                         </li>
                         <li class="nav-item">
                             <form action="{{ route('logout') }}" method="POST">
@@ -24,10 +24,10 @@
                     @guest()
                         
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/login">Login</a>
+                            <a class="nav-link {{ Route::is('login') ? 'active' : '' }}" aria-current="page" href="{{ route('login') }}">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/register">Register</a>
+                            <a class="nav-link {{ Route::is('register') ? 'active' : '' }}" href="{{ route('register') }}">Register</a>
                         </li>
                     @endguest
 

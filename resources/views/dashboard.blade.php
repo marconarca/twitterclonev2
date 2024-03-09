@@ -26,7 +26,8 @@
                 </div>
             @empty
                 <p class="text-center my-3">No Results Found.</p>
-            @endforeach
+            @endforelse
+            
             <div class="mt-3">
                 {{ $ideas->withQueryString()->links() }}
             </div>
