@@ -5665,16 +5665,16 @@
     "packages-dev": [
         {
             "name": "barryvdh/laravel-debugbar",
-            "version": "v3.11.0",
+            "version": "v3.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-debugbar.git",
-                "reference": "762684120b4edba3f2cd1d2c33d63a34866b6caa"
+                "reference": "ee233350ee0d5c6e91ea8674b69e7424a471c386"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/762684120b4edba3f2cd1d2c33d63a34866b6caa",
-                "reference": "762684120b4edba3f2cd1d2c33d63a34866b6caa",
+                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/ee233350ee0d5c6e91ea8674b69e7424a471c386",
+                "reference": "ee233350ee0d5c6e91ea8674b69e7424a471c386",
                 "shasum": ""
             },
             "require": {
@@ -5733,7 +5733,7 @@
             ],
             "support": {
                 "issues": "https://github.com/barryvdh/laravel-debugbar/issues",
-                "source": "https://github.com/barryvdh/laravel-debugbar/tree/v3.11.0"
+                "source": "https://github.com/barryvdh/laravel-debugbar/tree/v3.12.0"
             },
             "funding": [
                 {
@@ -5745,7 +5745,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-09T08:41:41+00:00"
+            "time": "2024-03-12T11:15:14+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -6132,16 +6132,16 @@
         },
         {
             "name": "maximebf/debugbar",
-            "version": "v1.21.0",
+            "version": "v1.21.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/maximebf/php-debugbar.git",
-                "reference": "9700e509740daa03d909e5f7cc19f719bcbe6915"
+                "reference": "8c55824b600c42f26c92d2097926ad534dab070e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maximebf/php-debugbar/zipball/9700e509740daa03d909e5f7cc19f719bcbe6915",
-                "reference": "9700e509740daa03d909e5f7cc19f719bcbe6915",
+                "url": "https://api.github.com/repos/maximebf/php-debugbar/zipball/8c55824b600c42f26c92d2097926ad534dab070e",
+                "reference": "8c55824b600c42f26c92d2097926ad534dab070e",
                 "shasum": ""
             },
             "require": {
@@ -6192,9 +6192,9 @@
             ],
             "support": {
                 "issues": "https://github.com/maximebf/php-debugbar/issues",
-                "source": "https://github.com/maximebf/php-debugbar/tree/v1.21.0"
+                "source": "https://github.com/maximebf/php-debugbar/tree/v1.21.2"
             },
-            "time": "2024-03-01T15:28:34+00:00"
+            "time": "2024-03-12T09:54:01+00:00"
         },
         {
             "name": "mockery/mockery",

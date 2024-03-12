@@ -69,6 +69,9 @@ Route::get('profile', [UserController::class, 'profile'])->middleware('auth')->n
 Route::post('users/{user}/follow', [FollowerController::class, 'follow'])->middleware('auth')->name('users.follow');
 Route::post('users/{user}/unfollow', [FollowerController::class, 'unfollow'])->middleware('auth')->name('users.unfollow');
 
+Route::post('idea/{idea}/like', [IdeaController::class, 'like'])->middleware('auth')->name('idea.like');
+Route::post('idea/{idea}/unlike', [IdeaController::class, 'unlike'])->middleware('auth')->name('idea.unlike');
+
 Route::get('/terms', function() {
     return view('terms');
 })->name('terms');

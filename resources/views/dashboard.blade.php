@@ -7,7 +7,7 @@
         </div>
         <div class="col-6">
             @include('shared.success_message')
-            @include('shared.submit_idea')
+            @include('ideas.shared.submit_idea')
             <hr>
             {{-- @if (count($ideas) > 0)
                 
@@ -22,7 +22,7 @@
 
             @forelse ($ideas as $idea )
                 <div class="mt-3">
-                    @include('shared.idea_card')
+                    @include('ideas.shared.idea_card')
                 </div>
             @empty
                 <p class="text-center my-3">No Results Found.</p>

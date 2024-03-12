@@ -17,7 +17,6 @@ class ideas extends Model
 
     protected $fillable = [
         'content',
-        'like',
         'user_id'
     ];
 
@@ -33,6 +32,12 @@ class ideas extends Model
 
     public function user() {
         return $this->belongsTo(User::class);
+    }
+
+    // idea_like
+    // Kung matingala ka nga dili sya same sa belongToMany nga following method sa User kei tungod e kini gi automatic na sya nga user_id ug idea_id jud sya
+    public function likes() {
+        return $this->belongsToMany(User::class, 'idea_like')->withTimestamps();
     }
 
 
